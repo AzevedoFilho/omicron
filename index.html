@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMICRON RALLYCROSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #loader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+
+    <!-- Loader -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        document.getElementById("loader").style.display = "none";
+      });
+    </script>
+
+    <!-- Navbar -->
+    <header class="fixed w-full bg-black/80 backdrop-blur z-50">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-6 py-4">
+        <h1 class="text-lg font-bold">BRX OMICRON RALLYCROSS</h1>
+        <div class="flex items-center space-x-6">
+          <nav class="space-x-6">
+            <a href="#home" class="hover:text-gray-300">Home</a>
+            <a href="#sobre" class="hover:text-gray-300">Sobre</a>
+            <a href="#live" class="hover:text-gray-300">Live</a>
+          </nav>
+          <a href="https://forms.gle/cVWJBaxvd59k4VsRA" target="_blank" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition">Inscreva-se</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center">
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover filter blur-sm brightness-50">
+        <source src="0508.mp4" type="video/mp4" />
+      </video>
+      <div class="relative z-10 max-w-3xl px-4">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">DESAFIE SEUS LIMITES</h2>
+        <p class="text-gray-200 text-lg md:text-xl mb-6">Experimente a adrenalina do rallycross como nunca antes. Junte-se a nós nessa aventura!</p>
+        <a href="https://forms.gle/cVWJBaxvd59k4VsRA" target="_blank" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200 transition font-semibold">Inscreva-se Agora</a>
+      </div>
+    </section>
+
+    <!-- Patrocinadores -->
+    <section class="py-16 bg-black text-center" id="patrocinadores">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Patrocinadores</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <img src="omicron_.png" alt="Patrocinador 1" class="mx-auto h-16 object-contain" />
+          <img src="dirtrally.png" alt="Patrocinador 2" class="mx-auto h-16 object-contain" />
+          <img src="ea.png" alt="Patrocinador 3" class="mx-auto h-16 object-contain" />
+          <img src="steam.png" alt="Patrocinador 4" class="mx-auto h-16 object-contain" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-black text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-6 text-white">Sobre o Evento</h2>
+        <p class="text-white text-lg">🏁 BRX Omicron Rallycross 2025 ✔</p>
+        <p class="text-white text-lg">Sinta a adrenalina. Enfrente o barro. Conquiste a vitória.</p>
+        <p class="text-white text-lg">Prepare-se para o maior desafio virtual off-road do ano! O BRX Omicron Rallycross 2025 reunirá os melhores pilotos do sim racing em uma competição intensa e cheia de emoção, disputada na plataforma consagrada DiRT Rally 2.0.</p>
+        <p class="text-white text-lg">Com provas em circuitos icônicos e condições extremas, os participantes vão precisar de habilidade, sangue frio e muita coragem para conquistar o topo do pódio. E não é só pela glória: os campeões receberão troféus físicos como reconhecimento oficial do desempenho nas pistas digitais!</p>
+      </div>
+    </section>
+
+    <!-- Live -->
+    <section id="live" class="py-20 bg-black text-center">
+      <div class="w-full max-w-4xl mx-auto aspect-video">
+        <h2 class="text-4xl font-bold mb-6 text-white">Transmissão Ao Vivo</h2>
+        <iframe 
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/y7ZBGBaWWVo?si=fUvrnEIMUNtkyl3W"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-300 text-zinc-950 text-sm py-6 text-center">
+      © 2025 BRX OMICRON RALLYCROSS. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
